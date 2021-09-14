@@ -37,7 +37,9 @@ func Solution(A []int) []int {
 				min_idx = j
 			}
 		}
-		swap(&A[min_idx], &A[i])
+		if min_idx != i { // check if min_idx has changed
+			swap(&A[min_idx], &A[i])
+		}
 	}
 	return A
 }
